@@ -1,0 +1,501 @@
+
+/* 1. Design system */
+:root {
+    --bg: #080D19;
+    --surface: #101827;
+    --surface-hover: #172338;
+    --text: #F1F5F9;
+    --muted: #9AA9BD;
+    --blue: #60A5FA;
+    --violet: #A78BFA;
+    --border: #263449;
+}
+
+/* 2. Reset default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+/* 3. Main layout */
+.container {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+}
+
+/* 4. Navigation */
+.navbar {
+    border-bottom: 1px solid var(--border);
+    background: rgba(8, 13, 25, 0.92);
+}
+
+.nav-content {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.logo span {
+    color: var(--blue);
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+a {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--blue);
+}
+
+/* 5. Hero section */
+.hero {
+    min-height: 68vh;
+    display: flex;
+    align-items: center;
+    padding: 90px 0;
+}
+
+.eyebrow {
+    color: var(--blue);
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+h1 {
+    font-size: clamp(2.6rem, 7vw, 4.8rem);
+    line-height: 1.12;
+    margin: 18px 0;
+    letter-spacing: -2px;
+}
+
+h1 span {
+    color: var(--blue);
+}
+
+.hero p {
+    max-width: 650px;
+    color: var(--muted);
+    font-size: 1.1rem;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.button {
+    display: inline-block;
+    padding: 11px 20px;
+    border: 1px solid var(--blue);
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.button.primary {
+    background: var(--blue);
+    color: #08111f;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+/* 6. Sections and cards */
+section {
+    padding: 65px 0;
+    scroll-margin-top: 24px;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.section-intro {
+    color: var(--muted);
+    margin-bottom: 30px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.card {
+    padding: 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    transition: transform 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: var(--blue);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p,
+.card li {
+    color: var(--muted);
+}
+
+.card ul {
+    padding-left: 20px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.tag {
+    background: #172b46;
+    color: #a9d2ff;
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 0.82rem;
+}
+
+/* 7. Contact and footer */
+.contact-card {
+    background: linear-gradient(135deg, #101827, #132742);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+}
+
+footer {
+    border-top: 1px solid var(--border);
+    padding: 26px 0;
+    color: var(--muted);
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* 8. Mobile-friendly layout */
+@media (max-width: 650px) {
+    .nav-content {
+        padding: 16px 0;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .nav-links {
+        gap: 14px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 75px 0;
+    }
+
+    h1 {
+        letter-spacing: -1px;
+    }
+}
+
+/* Contact details */
+.contact-details {
+    display: grid;
+    gap: 14px;
+    margin-top: 24px;
+}
+
+.contact-details p {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    color: var(--muted);
+    overflow-wrap: anywhere;
+}
+
+.contact-label {
+    width: 90px;
+    flex-shrink: 0;
+    color: var(--text);
+    font-weight: 600;
+}
+
+.contact-details a {
+    color: var(--blue);
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    white-space: nowrap;
+}
+
+@media (max-width: 400px) {
+    .logo {
+        font-size: 1rem;
+    }
+
+    .contact-label {
+        width: 100%;
+    }
+}
+.name-highlight {
+    background: linear-gradient(
+        90deg,
+        var(--blue),
+        var(--violet)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Featured project cards */
+.title-dot {
+    color: var(--violet);
+}
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(
+        90deg,
+        var(--blue),
+        var(--violet)
+    );
+    opacity: 0.8;
+}
+
+.project-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.project-number {
+    color: var(--blue);
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.project-type {
+    color: var(--violet);
+    background: rgba(167, 139, 250, 0.1);
+    border: 1px solid rgba(167, 139, 250, 0.2);
+    border-radius: 6px;
+    padding: 5px 9px;
+    font-size: 0.75rem;
+}
+
+.project-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.project-details {
+    border-left: 2px solid var(--blue);
+    padding-left: 14px;
+    margin-top: 22px;
+}
+
+.project-details h4 {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+    color: var(--text);
+}
+
+.project-details p {
+    font-size: 0.93rem;
+}
+
+.project-card .tags {
+    margin-top: 22px;
+}
+
+.project-card:hover::before {
+    opacity: 1;
+}
+
+/* Technical skills refinement */
+.skills-grid {
+    align-items: stretch;
+}
+
+.skill-card {
+    height: 100%;
+}
+
+.skill-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.skill-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: linear-gradient(
+        135deg,
+        rgba(96, 165, 250, 0.16),
+        rgba(167, 139, 250, 0.16)
+    );
+    border: 1px solid rgba(96, 165, 250, 0.2);
+    color: var(--blue);
+    font-size: 1.05rem;
+    font-weight: 800;
+}
+
+.skill-label {
+    color: var(--muted);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.skill-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.skill-card > p {
+    font-size: 0.94rem;
+}
+
+.skill-card .tags {
+    margin-top: 20px;
+}
+
+.skill-card .tag {
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.skill-card .tag:hover {
+    background: rgba(96, 165, 250, 0.2);
+    color: var(--text);
+}
+
+/* About section */
+.about-card {
+    position: relative;
+    overflow: hidden;
+    padding: 30px;
+}
+
+.about-accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(
+        180deg,
+        var(--blue),
+        var(--violet)
+    );
+}
+
+.about-card > p {
+    color: var(--muted);
+    margin-bottom: 18px;
+    max-width: 850px;
+}
+
+.about-card > p:last-of-type {
+    margin-bottom: 0;
+}
+
+.about-facts {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 30px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+}
+
+.about-fact {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.fact-value {
+    color: var(--blue);
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+.fact-label {
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+@media (max-width: 500px) {
+    .about-card {
+        padding: 24px 20px;
+    }
+
+    .about-facts {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+}

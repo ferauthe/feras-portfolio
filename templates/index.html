@@ -1,0 +1,365 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Feras Mahmoud's IT portfolio covering software development, databases, networking and security.">
+
+    <title>Feras Mahmoud | IT Portfolio</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+
+<header class="navbar">
+    <div class="container nav-content">
+        <a class="logo" href="#home">
+            FERAS MAHMOUD<span>.</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
+
+    <main>
+        <section class="hero container" id="home">
+            <div>
+                <p class="eyebrow">Information Technology Graduate</p>
+
+
+                   <h1>
+                   Hi, I'm<br>
+                     <span class="name-highlight">Feras Mahmoud</span><span>.</span>
+                      </h1>
+
+
+                <p>
+                    An IT graduate interested in software development,
+                    databases, networking, and cybersecurity.
+                    I'm looking to apply my technical knowledge,
+                    keep learning, and contribute to real-world projects.
+                </p>
+
+
+<div class="actions">
+    <a class="button primary" href="#projects">
+        Explore my work
+    </a>
+
+    <a class="button" href="#contact">
+        Get in touch
+    </a>
+
+    <a class="button"
+       href="{{ url_for('static', filename='Feras-Mahmoud-CV.pdf') }}"
+       download="Feras-Mahmoud-CV.pdf">
+        <span aria-hidden="true">↓</span> Download CV
+    </a>
+
+            </div>
+        </section>
+
+
+<section class="container" id="about">
+    <h2 class="section-title">
+        About Me<span class="title-dot">.</span>
+    </h2>
+
+    <p class="section-intro">
+        IT graduate with a broad technical foundation and a drive to keep learning.
+    </p>
+
+    <div class="card about-card">
+        <div class="about-accent"></div>
+
+        <p>
+            I'm an Information Technology graduate from King Abdulaziz
+            University, with an academic background in software
+            development, database systems, network administration,
+            and security.
+        </p>
+
+        <p>
+            Through collaborative university projects and independent
+            learning, I've gained exposure to web application
+            development, relational databases, technical documentation,
+            and IT troubleshooting.
+        </p>
+
+        <p>
+            I'm looking to begin my career in IT, where I can contribute
+            to a team, strengthen my technical skills, and grow through
+            hands-on experience across software and IT systems.
+        </p>
+
+        <div class="about-facts">
+            <div class="about-fact">
+                <span class="fact-value">B.Sc.</span>
+                <span class="fact-label">Information Technology</span>
+            </div>
+
+            <div class="about-fact">
+                <span class="fact-value">4.06 / 5</span>
+                <span class="fact-label">University GPA</span>
+            </div>
+
+            <div class="about-fact">
+                <span class="fact-value">2026</span>
+                <span class="fact-label">Graduation Year</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="container" id="skills">
+    <h2 class="section-title">
+        Technical Skills<span class="title-dot">.</span>
+    </h2>
+
+    <p class="section-intro">
+        A broad technical foundation across software, data,
+        networking, and IT systems.
+    </p>
+
+    <div class="grid skills-grid">
+        <article class="card skill-card">
+            <div class="skill-heading">
+                <span class="skill-icon">&lt;/&gt;</span>
+                <span class="skill-label">01 / DEVELOPMENT</span>
+            </div>
+
+            <h3>Software Development</h3>
+            <p>Programming fundamentals and web application development.</p>
+
+            <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">Java</span>
+                <span class="tag">C#</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">React</span>
+                <span class="tag">Flask</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">SQLAlchemy</span>
+            </div>
+        </article>
+
+        <article class="card skill-card">
+            <div class="skill-heading">
+                <span class="skill-icon">▤</span>
+                <span class="skill-label">02 / DATA</span>
+            </div>
+
+            <h3>Databases</h3>
+            <p>Relational databases, SQL queries, and application integration.</p>
+
+            <div class="tags">
+                <span class="tag">Oracle</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">SQL</span>
+                <span class="tag">Oracle APEX</span>
+                <span class="tag">Database Design</span>
+            </div>
+        </article>
+
+        <article class="card skill-card">
+            <div class="skill-heading">
+                <span class="skill-icon">⌘</span>
+                <span class="skill-label">03 / INFRASTRUCTURE</span>
+            </div>
+
+            <h3>Networking & Security</h3>
+            <p>Network fundamentals, troubleshooting, and security lab tools.</p>
+
+            <div class="tags">
+                <span class="tag">TCP/IP</span>
+                <span class="tag">DNS</span>
+                <span class="tag">DHCP</span>
+                <span class="tag">Cisco Packet Tracer</span>
+                <span class="tag">Kali Linux</span>
+            </div>
+        </article>
+
+        <article class="card skill-card">
+            <div class="skill-heading">
+                <span class="skill-icon">⚙</span>
+                <span class="skill-label">04 / TOOLS</span>
+            </div>
+
+            <h3>Tools & Systems</h3>
+            <p>Command-line utilities, development workflows, and containers.</p>
+
+            <div class="tags">
+                <span class="tag">Git</span>
+                <span class="tag">Linux</span>
+                <span class="tag">PowerShell</span>
+                <span class="tag">Docker</span>
+                <span class="tag">Windows</span>
+            </div>
+        </article>
+    </div>
+</section>
+
+
+
+<section class="container" id="projects">
+    <h2 class="section-title">Featured Projects<span class="title-dot">.</span></h2>
+
+    <p class="section-intro">
+        Practical experience through academic collaboration and hands-on development.
+    </p>
+
+    <div class="grid">
+        <article class="card project-card">
+            <div class="project-top">
+                <span class="project-number">01</span>
+                <span class="project-type">Graduation Project</span>
+            </div>
+
+            <h3>MyFCITR</h3>
+
+            <p>
+                A university platform for the Faculty of Computing and
+                Information Technology, featuring visiting student
+                request management and medical report workflows.
+            </p>
+
+            <div class="project-details">
+                <h4>My contribution</h4>
+                <p>
+                    Contributed to requirements analysis, use cases,
+                    research, documentation, presentation materials,
+                    and testing as part of a collaborative student team.
+                </p>
+            </div>
+
+            <div class="tags">
+                <span class="tag">React</span>
+                <span class="tag">Python</span>
+                <span class="tag">Oracle DB</span>
+                <span class="tag">Software Engineering</span>
+            </div>
+        </article>
+
+        <article class="card project-card">
+            <div class="project-top">
+                <span class="project-number">02</span>
+                <span class="project-type">Personal Project</span>
+            </div>
+
+            <h3>Personal Portfolio</h3>
+
+            <p>
+                A responsive portfolio website built to present my
+                background, technical skills, and projects to potential
+                employers.
+            </p>
+
+            <div class="project-details">
+                <h4>What I'm practising</h4>
+                <p>
+                    Building a web application with Flask, structuring
+                    reusable frontend assets, improving responsive design,
+                    and learning Git, GitHub, and deployment.
+                </p>
+            </div>
+
+            <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">Flask</span>
+                <span class="tag">HTML/CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Git</span>
+            </div>
+        </article>
+    </div>
+</section>
+
+
+
+
+
+<section class="container" id="contact">
+    <div class="contact-card">
+        <h2 class="section-title">Let's connect</h2>
+
+        <p class="section-intro">
+            I'm open to entry-level opportunities in IT,
+            software development, databases, networking,
+            and technical support across Saudi Arabia.
+        </p>
+
+        <div class="contact-details">
+            <p>
+                <span class="contact-label">Location</span>
+                Saudi Arabia
+            </p>
+
+            <p>
+                <span class="contact-label">Email</span>
+                <a href="mailto:ferauthe@gmail.com">
+                    ferauthe@gmail.com
+                </a>
+            </p>
+
+            <p>
+                <span class="contact-label">Phone</span>
+                <a href="tel:+966502457180">
+                    +966 50 245 7180
+                </a>
+            </p>
+
+            <p>
+                <span class="contact-label">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/feras-mahmoud-355404419"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    View my LinkedIn profile ↗
+                </a>
+            </p>
+        </div>
+
+        <div class="actions">
+            <a class="button primary"
+               href="mailto:ferauthe@gmail.com">
+                Email me
+            </a>
+
+            <a class="button"
+               href="https://www.linkedin.com/in/feras-mahmoud-355404419"
+               target="_blank"
+               rel="noopener noreferrer">
+                Connect on LinkedIn
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>
+                &copy; <span id="year">2026</span> Feras Mahmoud.
+                Built with Python and Flask.
+            </p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
